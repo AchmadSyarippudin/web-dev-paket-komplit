@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.menu');
+});
+
+//--------- Buku ----------------
+Route::namespace('Buku')->group( function () {
+	Route::get('/buku', 'BukuController@show');  	
 });
